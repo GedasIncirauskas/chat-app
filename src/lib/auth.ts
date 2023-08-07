@@ -2,6 +2,7 @@ import { NextAuthOptions } from "next-auth";
 import { UpstashRedisAdapter } from "@next-auth/upstash-redis-adapter";
 import { db } from "./db";
 import GoogleProvider from "next-auth/providers/google";
+import { ROUTING_PATHS } from "@/constants/routing";
 
 const getGoogleCredentials = () => {
   const clientId = process.env.GOOGLE_CLIENT_ID;
@@ -22,7 +23,7 @@ export const authOptions: NextAuthOptions = {
     strategy: "jwt",
   },
   pages: {
-    signIn: "/login",
+    signIn: ROUTING_PATHS.signIn,
   },
   providers: [
     GoogleProvider({
@@ -54,7 +55,7 @@ export const authOptions: NextAuthOptions = {
       return session;
     },
     redirect() {
-      return "/dashboard";
+      return ROUTING_PATHS.dashboard;
     },
   },
 };

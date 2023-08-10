@@ -1,15 +1,13 @@
 "use client";
 
 import Button from "@/components/ui/buttons/Button";
-import { signIn } from "next-auth/react";
 import { FC, useState } from "react";
+import { signIn } from "next-auth/react";
 import { toast } from "react-hot-toast";
-import googleIcon from "../../../public/google.svg";
+import googleIcon from "../../../../public/google.svg";
 import Image from "next/image";
 
-interface pageProps {}
-
-const Page: FC<pageProps> = ({}) => {
+const Page: FC = ({}) => {
   const [isLoading, setIsLoading] = useState<boolean>(false);
 
   const loginWithGoogle = async () => {
@@ -28,8 +26,8 @@ const Page: FC<pageProps> = ({}) => {
         <div className="w-full flex flex-col items-center max-w-md space-y-8">
           <div className="flex flex-col items-center gap-8">
             logo
-            <h2 className="mt-6 text-center text-3xl fond-bold tracking-tight text-gray-900">
-              Sign in to you account
+            <h2 className="mt-6 text-center text-3xl font-bold tracking-tight text-gray-900">
+              Sign in to your account
             </h2>
           </div>
           <Button

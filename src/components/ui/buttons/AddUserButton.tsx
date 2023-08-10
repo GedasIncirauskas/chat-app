@@ -27,7 +27,7 @@ const AddUserButton: FC<AddUserButtonProps> = ({}) => {
   const addFriend = async (email: string) => {
     try {
       const validateEmail = addUserValidation.parse({ email });
-      await axios.post("api/friends/add", {
+      await axios.post("/api/friends/add", {
         email: validateEmail,
       });
       setShowSuccess(true);
@@ -67,7 +67,9 @@ const AddUserButton: FC<AddUserButtonProps> = ({}) => {
       </div>
       <pre className="text-sm text-red-600 mt-1">{errors.email?.message}</pre>
       {showSuccess ? (
-        <pre className="text-sm text-green-600 mt-1">User added success!</pre>
+        <pre className="text-sm text-green-600 mt-1">
+          User added successfully!
+        </pre>
       ) : null}
     </form>
   );

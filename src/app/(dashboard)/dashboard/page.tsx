@@ -7,7 +7,7 @@ interface DashboardProps {}
 
 const Dashboard: FC<DashboardProps> = async ({}) => {
   const session = await getServerSession(authOptions);
-  return <pre>{JSON.stringify(session)}</pre>;
+  return <pre>{"dash"}</pre>;
 };
 
 export default Dashboard;

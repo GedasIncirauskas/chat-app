@@ -21,7 +21,6 @@ export default withAuth(
       if (isAuth) {
         return NextResponse.redirect(new URL(dashboard, req.url));
       }
-
       return NextResponse.next();
     }
 

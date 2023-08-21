@@ -1,4 +1,4 @@
-import { fn } from "@/lib/utils";
+import { cn } from "@/lib/utils";
 import { cva, VariantProps } from "class-variance-authority";
 import { ImSpinner } from "react-icons/im";
 import { ButtonHTMLAttributes, FC } from "react";
@@ -40,7 +40,7 @@ const Button: FC<ButtonProps> = ({
 }) => {
   return (
     <button
-      className={fn(buttonVariants({ variant, size, className }))}
+      className={cn(buttonVariants({ variant, size, className }))}
       disabled={isLoading}
       {...props}
     >

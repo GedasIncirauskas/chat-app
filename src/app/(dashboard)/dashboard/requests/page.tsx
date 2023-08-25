@@ -20,7 +20,7 @@ const page = async () => {
 
       return {
         senderId,
-        senderEmail: senderParsed.email,
+        senderEmail: senderParsed?.email,
       };
     })
   );

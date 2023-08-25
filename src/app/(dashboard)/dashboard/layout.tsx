@@ -124,7 +124,9 @@ const Layout: FC<LayoutProps> = async ({ children }) => {
           </ul>
         </nav>
       </div>
-      {children}
+      <aside className="max-h-screen container py-8 md:py-6 w-full">
+        {children}
+      </aside>
     </div>
   );
 };

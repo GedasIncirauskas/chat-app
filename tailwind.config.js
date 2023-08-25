@@ -9,6 +9,13 @@ module.exports = {
     "./src/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
+    container: {
+      center: true,
+      screens: {
+        "2xl": "1360px",
+      },
+      padding: "1.5rem",
+    },
     extend: {},
   },
   plugins: [],

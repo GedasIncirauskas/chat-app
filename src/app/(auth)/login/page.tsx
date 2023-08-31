@@ -49,6 +49,7 @@ const Page: FC = () => {
                 height={15}
                 width={15}
                 className="mr-1"
+                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
               />
             )}
             Google

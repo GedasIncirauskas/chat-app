@@ -69,6 +69,7 @@ const page = async ({ params }: PageProps) => {
                 src={chatPartner.image}
                 alt={`${chatPartner.name} profile picture`}
                 className="rounded-full"
+                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
               />
             </div>
           </div>

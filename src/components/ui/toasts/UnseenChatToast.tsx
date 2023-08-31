@@ -41,6 +41,7 @@ const UnseenChatToast: FC<UnseenChatToastProps> = ({
                 className="rounded-full"
                 src={senderImg}
                 alt={`${senderName} profile picture`}
+                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
               />
             </div>
           </div>

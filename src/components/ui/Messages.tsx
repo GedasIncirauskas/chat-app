@@ -109,6 +109,7 @@ const Messages: FC<MessagesProps> = ({
                   alt="Profile picture"
                   referrerPolicy="no-referrer"
                   className="rounded-full"
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                 />
               </div>
             </div>

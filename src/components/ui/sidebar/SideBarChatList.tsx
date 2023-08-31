@@ -74,13 +74,13 @@ const SidebarChatList: FC<SidebarChatListProps> = ({ friends, sessionId }) => {
 
   return (
     <ul role="list" className="max-h-[25rem] overflow-y-auto -mx-2 space-y-1">
-      {activeChats.sort().map((friend) => {
+      {activeChats.sort().map((friend, index) => {
         const unseenMessagesCount = unseenMessages.filter((unseenMsg) => {
-          return unseenMsg.senderId === friend?.id;
+          return unseenMsg.senderId === friend.id;
         }).length;
 
         return (
-          <li key={friend?.id}>
+          <li key={friend?.id + index}>
             <a
               href={`/dashboard/chat/${chatHrefConstructor(
                 sessionId,

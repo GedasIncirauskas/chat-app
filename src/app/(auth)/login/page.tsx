@@ -1,13 +1,14 @@
 "use client";
 
-import Button from "@/components/ui/buttons/Button";
 import { FC, useState } from "react";
 import { signIn } from "next-auth/react";
 import { toast } from "react-hot-toast";
+import Button from "@/components/ui/buttons/Button";
 import googleIcon from "../../../../public/google.svg";
+import { FaReact } from "react-icons/fa";
 import Image from "next/image";
 
-const Page: FC = ({}) => {
+const Page: FC = () => {
   const [isLoading, setIsLoading] = useState<boolean>(false);
 
   const loginWithGoogle = async () => {
@@ -24,9 +25,14 @@ const Page: FC = ({}) => {
     <>
       <div className="flex min-h-full items-center justify-center py-12 px-4 sm:px-6 lg:px-8">
         <div className="w-full flex flex-col items-center max-w-md space-y-8">
-          <div className="flex flex-col items-center gap-8">
-            logo
-            <h2 className="mt-6 text-center text-3xl font-bold tracking-tight text-gray-900">
+          <div className="flex flex-col items-center gap-6">
+            <div className="flex space-x-2">
+              <h1 className="text-center text-3xl tracking-tight text-gray-900 font-bold">
+                Welcome to chat app
+              </h1>
+              <FaReact className="h-8 w-auto text-gray-900" />
+            </div>
+            <h2 className="block text-xl leading-2 text-gray-900">
               Sign in to your account
             </h2>
           </div>

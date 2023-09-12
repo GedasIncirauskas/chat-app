@@ -12,6 +12,7 @@ import SignOutButton from "@/components/ui/buttons/SignOutButton";
 import FriendRequestSidebarOptions from "@/components/ui/sidebar/FriendRequestSidebarOptions";
 import { fetchRedis } from "@/helpers/redis";
 import SidebarChatList from "@/components/ui/sidebar/SideBarChatList";
+import MobileChatLayout from "@/components/MobileChatLayout";
 
 interface LayoutProps {
   children: ReactNode;
@@ -21,7 +22,6 @@ interface SideBarOptions {
   id: number;
   name: string;
   href: string;
-  Icon: any;
 }
 
 const sidebarOptions: SideBarOptions[] = [
@@ -29,7 +29,6 @@ const sidebarOptions: SideBarOptions[] = [
     id: 1,
     name: "Add friend",
     href: ROUTING_PATHS.dashboardAdd,
-    Icon: AiOutlinePlusCircle,
   },
 ];
 
@@ -49,7 +48,15 @@ const Layout: FC<LayoutProps> = async ({ children }) => {
 
   return (
     <div className="w-full flex h-screen">
-      <div className="flex h-full w-full max-w-xs grow flex-col gap-y-5 overflow-y-auto border-r border-gray-200 bg-white px-6">
+      <div className="md:hidden">
+        <MobileChatLayout
+          friends={friends}
+          session={session}
+          sidebarOptions={sidebarOptions}
+          unseenRequestCount={unseenRequestCount}
+        />
+      </div>
+      <div className="hidden md:flex h-full w-full max-w-xs grow flex-col gap-y-5 overflow-y-auto border-r border-gray-200 bg-white px-6">
         <Link
           href={ROUTING_PATHS.dashboard}
           className="flex h-16 shrink-0 items-center"
@@ -74,7 +81,6 @@ const Layout: FC<LayoutProps> = async ({ children }) => {
               </div>
               <ul role="list" className="-mx-2 mt-2 space-y-1">
                 {sidebarOptions.map((option) => {
-                  const Icon = option.Icon;
                   return (
                     <li key={option.id}>
                       <Link
@@ -82,7 +88,7 @@ const Layout: FC<LayoutProps> = async ({ children }) => {
                         className="text-gray-700 hover:text-indigo-600 hover:bg-gray-50 group flex gap-3 rounded-md p-2 text-sm leading-6 font-semibold"
                       >
                         <span className="text-gray-400 border-gray-200 group-hover:border-indigo-600 group-hover:text-indigo-600 flex h-6 w-6 shrink-0 items-center justify-center rounded-lg border text-[0.625rem] font-medium bg-white">
-                          <Icon className="h-4 w-4" />
+                          <AiOutlinePlusCircle className="h-4 w-4" />
                         </span>
                         <span className="truncate">{option.name}</span>
                       </Link>

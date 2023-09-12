@@ -4,7 +4,9 @@ import { FC } from "react";
 const AddNewUser: FC = ({}) => {
   return (
     <main className="pt-8">
-      <h1 className="font-bold text-5xl mb-8">Add a new friend</h1>
+      <h1 className="text-3xl mb-2 sm:text-5xl md:mb-8 font-bold">
+        Add a new friend
+      </h1>
       <AddUserButton />
     </main>
   );

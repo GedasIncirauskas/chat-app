@@ -56,14 +56,16 @@ const AddUserButton: FC<AddUserButtonProps> = ({}) => {
       >
         Add user by email address
       </label>
-      <div className="mt-2 flex gap-4">
+      <div className="flex flex-wrap md:flex-nowrap mt-2 gap-4">
         <input
           {...register("email")}
           type="text"
-          className="block w-full rounded-md border-0 py-1 text-grey-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-grey-400 placeholder:pl-1 focus:ring-1 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+          className="px-2 block w-full rounded-md border-0 py-1 text-grey-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-grey-400 placeholder:pl-1 focus:ring-1 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
           placeholder="email@email.com"
         />
-        <Button type="submit">Add</Button>
+        <Button type="submit" className="max-w-sm mx-auto w-full md:max-w-fit">
+          Add
+        </Button>
       </div>
       <pre className="text-sm text-red-600 mt-1">{errors.email?.message}</pre>
       {showSuccess ? (

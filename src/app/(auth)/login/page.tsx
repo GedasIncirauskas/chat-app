@@ -25,14 +25,14 @@ const Page: FC = () => {
     <>
       <div className="flex min-h-full items-center justify-center py-12 px-4 sm:px-6 lg:px-8">
         <div className="w-full flex flex-col items-center max-w-md space-y-8">
-          <div className="flex flex-col items-center gap-6">
+          <div className="gap-4 flex flex-col items-center md:gap-6">
             <div className="flex space-x-2">
-              <h1 className="text-center text-3xl tracking-tight text-gray-900 font-bold">
+              <h1 className="text-center text-sm md:text-3xl tracking-tight text-gray-900 font-bold">
                 Welcome to chat app
               </h1>
-              <FaReact className="h-8 w-auto text-gray-900" />
+              <FaReact className="h-5 md:h-8 w-auto text-gray-900" />
             </div>
-            <h2 className="block text-xl leading-2 text-gray-900">
+            <h2 className="sm:text-sm md:block md:text-xl leading-2 text-gray-900 text-center">
               Sign in to your account
             </h2>
           </div>

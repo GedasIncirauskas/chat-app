@@ -3,7 +3,6 @@ import { authOptions } from "@/lib/auth";
 import { getServerSession } from "next-auth";
 import { notFound } from "next/navigation";
 import { ROUTING_PATHS } from "@/constants/routing";
-import { AiOutlineSend } from "react-icons/ai";
 import { getFriendsByUserId } from "@/helpers/get-friends-by-user-id";
 import { AiOutlinePlusCircle } from "react-icons/ai";
 import Link from "next/link";
@@ -61,7 +60,7 @@ const Layout: FC<LayoutProps> = async ({ children }) => {
           href={ROUTING_PATHS.dashboard}
           className="flex h-16 shrink-0 items-center"
         >
-          <AiOutlineSend className="h-8 w-auto text-indigo-600" />
+          Dashboard
         </Link>
 
         {friends.length > 0 ? (

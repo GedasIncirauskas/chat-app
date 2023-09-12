@@ -1,31 +1,58 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+## Friends chat app
+
+I created this application out of curiosity to try the latest version of next js and use websocket
+Here the user can add other users, write them a message.
 
 ## Getting Started
 
-First, run the development server:
+#### Installation
+
+First of all, clone app from here to you device:
+
+```bash
+  git clone https://github.com/GedasIncirauskas/chat-app.git
+```
+
+Install dependencies
+
+```bash
+  npm install
+```
+
+Run the development server:
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Tech Stack
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+- Next js,
+- TypeScript
+- TailwindCSS,
+- Redis
 
-## Learn More
+## Environment Variables
 
-To learn more about Next.js, take a look at the following resources:
+To run this project, you will need to add the following environment variables to your .env file
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+`UPSTASH_REDIS_REST_URL`
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+`UPSTASH_REDIS_REST_TOKEN`
+
+`GOOGLE_CLIENT_ID`
+
+`GOOGLE_CLIENT_SECRET`
+
+`NEXTAUTH_SECRET`
+
+`PUSHER_APP_ID`
+
+`NEXT_PUBLIC_PUSHER_APP_KEY`
+
+`PUSHER_APP_SECRET`
 
 ## Deploy on Vercel
 
